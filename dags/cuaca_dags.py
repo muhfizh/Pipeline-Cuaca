@@ -7,7 +7,7 @@ import os
 from dotenv import load_dotenv
 
 # Load .env
-dotenv_path = join(dirname(__file__), '.env')
+dotenv_path = os.path.join(os.path.dirname(__file__).replace("dags", ""), '.env')
 load_dotenv(dotenv_path)
 
 # Konfigurasi variabel dari environment
@@ -22,7 +22,7 @@ DB_SCHEMA = os.getenv('DB_SCHEMA')
 
 default_args = {
     'owner': 'airflow',
-    'retries': 1,
+    'retries': 3,
     'retry_delay': timedelta(minutes=5)
 }
 

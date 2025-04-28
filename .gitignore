@@ -1,0 +1,22 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Airflow-specific
+airflow.cfg
+logs/
+unittest.cfg
+.env
+.env.*
+
+# Environments
+.venv/
+env/
+py_env/
+
+# Others
+*.db
+*.sqlite3
+.idea/
+.vscode/
